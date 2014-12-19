@@ -1,0 +1,312 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*html 5 for ie */
+/*----- HTML5 default display styles -----*/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+	display: block;
+}
+
+keygen, meter, progress {
+	display: inline-block;
+}
+
+output {
+	display: inline;
+}		
+
+audio {
+	height: 32px;
+}
+
+keygen {
+	margin: 0em;
+}
+
+mark {
+	background-color: yellow;
+	color: black;
+}
+
+meter {
+	width: 5em;
+	height: 1em;
+	vertical-align: -0.2em;
+}
+
+progress {
+	width: 10em;
+	height: 1em;
+	vertical-align: -0.2em;
+	background-color: gray;
+}
+
+button {background:none;}
+
+/*fonts*/
+@font-face {
+    font-family: 'geosanslightregular';
+    src: url('fonts/geosanslight-webfont.eot');
+    src: url('fonts/geosanslight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geosanslight-webfont.woff') format('woff'),
+         url('fonts/geosanslight-webfont.ttf') format('truetype'),
+         url('fonts/geosanslight-webfont.svg#geosanslightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham';
+    src: url('fonts/gotham-thin-webfont.eot');
+    src: url('fonts/gotham-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-thin-webfont.woff') format('woff'),
+         url('fonts/gotham-thin-webfont.ttf') format('truetype'),
+         url('fonts/gotham-thin-webfont.svg#gotham_thinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.clear {clear:both;}
+
+hr.thick {
+    border: 0;
+    height: 6px;
+	margin:20px auto 10px auto;
+    background: #cccccc;
+	width:95%;
+}
+
+hr.thin {
+    border: 0;
+    height: 2px;
+	margin:10px auto 5px auto;
+    background: #cccccc;
+	width:95%;
+}
+
+#buffer {height:5px; width:100%;}
+
+#page_wrap { margin:0 auto; width:960px;}
+
+#header {width:100%; height:50px; background-color:white; margin-top:15px; margin-bottom:20px; }
+#header img {float:left;}
+
+/*Nav*/
+
+#logo {font-size:72px;font-weight:bold;}
+
+.nav {float:right; font-family:'geosanslightregular', Arial; letter-spacing:-1px; font-size:16px; text-transform:uppercase; margin-top:30px;}
+.nav ul { list-style-type:none; }
+.nav li {display:block; float:left; padding:0 5px;}
+.nav a {text-decoration:none; color:black; display:block;}
+.nav a:hover {text-decoration:underline; color:#666;}
+
+.nav_vert { border-right:1px black solid;}
+
+/*Home*/
+.home_bottom { }
+	.home_bottom a img {position:absolute;z-index:10; width:310px;}
+	.home_bottom p {position:absolute; 
+					display:block; 
+					float:right; 
+					z-index:100000; 
+					margin-left:auto;
+				    display:block; 
+					color:white; 
+					font-family:'geosanslightregular',Arial;
+					font-size:18px;
+					width:100px;
+					margin-left:200px;
+					text-align:center;
+					padding:5px;
+					 background-color:rgba(0, 0, 0, 0.65);}
+	#home_third p {margin-left:205px;width:auto;}
+	#home_last{
+	float:right; margin-right:0; 
+}
+
+/*Footer*/
+#footer { width:63%; border-top:1px solid black; padding-top:10px; margin-bottom:20px;}
+#nav_footer {float:none; margin-top:0; font-size:14px;}
+	#nav_footer li {margin-top:1%;}
+	#nav_footer img {float:left; margin-right:10px;}
+#footer_credit{font-size:11px; margin-top:5px; font-family:'geosanslightregular'; text-transform:lowercase; color:#666;}
+	#footer_credit a { display: inline; color:#666; text-decoration:none;}
+		#footer_credit a:hover {text-decoration:underline;}
+
+/*About*/
+#about_paragraph {float:right;}
+	#about_paragraph p {font-family:'geosanslightregular',Arial; font-size:17px; margin-bottom:20px; line-height:24px; width:480px;}
+	#about_paragraph p b {font-size:28px; font-weight:1000;}
+	#about_img {margin-bottom:20px;float:left;}
+
+/*News*/
+#news_wide {width:315px; height:155px; margin:0px;} /*CHANGE PICTURE TO WIDTH 315 AND HEIGHT 155*/
+.news_small {width:155px; height:155px; margin-bottom:5px;}		   /*CHANGE PICTURE TO WIDTH 155 AND HEIGHT 155*/
+	#small_left{margin-right:5px;}
+#news_big {width:635px; height:315px; margin-right:0; margin-top:0; margin-bottom:0;}	
+#news_single {width:315px; height:315px; margin-right:50px;  margin-top:0; margin-bottom:0;}	
+
+	/*News-Boxes*/
+	.box {
+		width:315px;
+		height:315px;
+		background:white;
+		margin-right:5px;
+		float:left;
+	
+	}
+	
+	.box_big {
+		width:630px;
+		height:310px;
+	
+	}
+	/*.box_content{	overflow:hidden;}*/
+	
+	#box_stack_top{ height:155px; width:100%; margin-bottom:5px;}
+	#box_stack_top_left {width:155px;}
+	#box_stack_top_right { width:155px;}
+	
+	#box_left {width:155px; height:100%; float:left; }
+	#box_right {width:155px; height:100%; float:right; } 
+	
+	#box_single {width:315px; height:315px; margin-right:5px;}
+	
+	/*Figures*/
+	figure { 
+	  display: block;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	
+	}
+	.figure_homepage{width:310px; height:210px; margin-right:15px; margin-top:15px; margin-bottom:35px;}
+	#figure_home{
+		z-index:10000000;
+	}
+	figcaption { 
+	
+	  position: absolute; 
+	  background: rgba(0,0,0,0.75); 
+	  color: white; 
+	  font-family:'geosanslightregular',Arial;
+	  padding: 10px 20px; 
+	  z-index:1;
+	  width:50%;
+	  opacity: 0;
+	  bottom: 0; 
+	  left: -30%;
+	  -webkit-transition: all 0.6s ease;
+	  -moz-transition:    all 0.6s ease;
+	  -o-transition:      all 0.6s ease;
+	}
+	
+	figure:hover figcaption {
+	  opacity: 1;
+	  left: 0;
+	}
+	
+	/*News Blurbs*/
+	.reveal-modal {font-family:'geosanslightregular',Arial; color:rgb(43,43,43);}
+.reveal-modal h2 {font-size:34px; margin-bottom:10px;}
+.reveal-modal p {font-size:14px; margin-bottom:10px;}
+.reveal-modal img {position:absolute; right:0; bottom:0; padding-right:45px;padding-bottom:20px;}
+.modal_link { text-transform:uppercase; display:block; margin-top:20px; font-size:16px;color:rgb(43,43,43); text-decoration:none;}
+	.modal_link:hover {text-decoration:underline; color:#999;}
+.close-reveal-modal {font-family:none;}
+
+.out_author { font-style:italic; font-size:12px;}
+
+/*Music*/
+
+#music_page_wrap { margin-bottom:20px;}
+
+.music_wrap {
+	float:left; width:300px; padding-right:14px; margin-right:14px; border-right:solid 1px black; 
+}
+
+	#chancesArePic {
+		height:300px;
+		width:300px;
+		background-image:url(images/chancesAre_bw.jpg);	
+	
+	}
+	#getWellPic {
+		height:300px;
+		width:300px;
+		background-image:url(images/getWell_bw.jpg);
+		
+	}
+	#moreThanEverPic {
+		height:300px;
+		width:300px;
+		background-image:url(images/moreThanEver_bw.jpg);	
+	}
+	
+	#music_last{
+			float:right; margin-right:0; border:0; padding:0;
+	}
+	.activelink #chancesArePic, #chancesArePic:hover{
+		background-image:url(images/chancesAre.jpg);
+    }
+	
+	.activelink #getWellPic, #getWellPic:hover{
+		background-image:url(images/getWell.jpg);
+    }
+	
+	.activelink #moreThanEverPic, #moreThanEverPic:hover {
+		background-image:url(images/moreThanEver.jpg);
+    }
+	/*HR backgrounds */
+	.activelink #chancesAre {background:rgb(251,170,104);}
+	.activelink #getWell { background:rgb(141,237,237);}
+	.activelink #moreThanEver {background:rgb(255,240,167);	}
+	
+	.play_music {margin-bottom:15px;}
+	
+	.play_music a, .play_music button {display:block; margin:0 auto;text-align:center; margin-bottom:5px; text-transform:uppercase; 
+				letter-spacing:-1px;font-family:'geosanslightregular',Arial; font-size:24px; color:black; text-decoration:none;}
+	
+	#playButton{ width:10px; height:10px; background:red;}
+	
+	#stop {visibility:hidden; display:none;}
+	
+	#music_credit{
+	font-family:'geosanslightregular', Arial; font-size:11px; color:#666; margin-bottom:10px; width:630px;
+}
+		#music_credit_left{float:left; width:310px;}
+		#music_credit_right{float:right; width:310px;}
+		.color{color:#333; font-size:13px;}
+	
+/*Cobtact*/
+.contact {font-family:'gotham',Arial; font-size:22px; color: rgba(126,126,126,0.7); font-weight:100;}
+	#contact_big{font-size:40px; color:black;}
+	#contact_link{font-size:36px; color:black; text-decoration:none; margin-bottom:25px; display:block;}
+		#contact_link:hover {text-decoration:underline; color:rgba(126,126,126,0.7);}
+		
+/*Media - Videos*/
+.video_wrapper {margin-top:10px; border-top:1px solid #CCC; padding-top:10px; margin-bottom:20px;}
+.media_video {width:310px; margin-right:10px; float:left;}
+#video_last {margin-right:none; float:right; background:black; }

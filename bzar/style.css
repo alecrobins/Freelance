@@ -1,0 +1,1093 @@
+@import url(http://fonts.googleapis.com/css?family=Karla|Quicksand);
+@import url('styles/boots-bones.css');
+/*
+Theme Name: Naked Wordpress
+Theme URI: http://bckmn.com/naked-wordpress
+Author: J Beckman
+Author URI: http://bckmn.com
+Description: A super bare theme for designers who don't know Wordpress PHP but want to build with Wordpress.
+Version: 1.0
+License: GNU General Public License
+
+-------------------------------------------------------------- */
+/* Reset
+-------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+code,
+kbd,
+tt,
+var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: .5ex;
+}
+small {
+  font-size: 75%;
+}
+big {
+  font-size: 125%;
+}
+figure {
+  margin: 0;
+}
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+th {
+  font-weight: bold;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+
+  vertical-align: baseline;
+  *vertical-align: middle;
+  /* Improves appearance and consistency in all browsers */
+
+}
+button,
+input {
+  line-height: normal;
+  /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+
+  *overflow: visible;
+  /* Corrects inner spacing displayed oddly in IE6/7 */
+
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: none;
+  border-radius: 10px;
+  background: #ccc;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+
+  font-size: 12px;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 1.12em 1.5em 1em;
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* Addresses box sizing set to content-box in IE8/9 */
+
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+
+  border: 0;
+  padding: 0;
+}
+input[type=text],
+input[type=email],
+textarea {
+  color: #888888;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  color: #101010;
+}
+input[type=text],
+input[type=email] {
+  padding: 3px;
+}
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+
+  padding: 10px;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+
+  width: 98%;
+}
+/* styles
+-------------------------------------------------------------- */
+body,
+button,
+input,
+select {
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  font-family: Helvetica, sans-serif;
+  line-height: 26.64px;
+  font-size: 18px;
+  font-size: 1.8rem;
+
+}
+/* typography 
+-------------------------------------------------------------- */
+/* Fonts */
+@font-face {
+    font-weight: 400; font-family: 'Open Sans', 'roboregular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+	
+@font-face {
+    font-weight: 300; font-family: 'Open Sans', 'robotolight';
+    src: url('fonts/Roboto-Light-webfont.eot');
+    src: url('fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-weight: 300; font-family: 'Open Sans', 'robotothin';
+    src: url('fonts/Roboto-Thin-webfont.eot');
+    src: url('fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('fonts/Roboto-Thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Open Sans Weight 
+		light: font-weight: 300;
+		regular: font-weight: 400;
+		semi-bold: font-weight: 600;
+		bold: font-weight: 700;
+	*/
+
+/* Headings */
+
+h4 {
+  line-height: 26px;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+/* Text elements */
+p {
+  margin-bottom: 1.5em;
+}
+ul,
+ol {
+/*  margin: 0 0 1.5em 3em;*/
+}
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 1.5em 1.5em;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+blockquote {
+  margin: 0 1.5em;
+}
+address {
+  margin: 0 0 1.5em;
+}
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 0.7em;
+  line-height: 1.5em;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
+  overflow: auto;
+  max-width: 100%;
+  box-shadow: 0 3px 5px #ddd inset;
+}
+/* Links */
+a {
+  color: #007998;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: rgba(0, 121, 152, 0.5);
+}
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+/* Header
+-------------------------------------------------------------- */
+.site-title a{
+  text-transform: uppercase;
+  font-size: 4em;
+  text-align: center;
+}
+.site-title a:hover{
+}
+.site-description{
+  font-style: italic;
+}
+header {
+  padding: 20px 0;
+  background: transparent;
+  margin: 20px auto;
+}
+header .gravatar {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0;
+  float: right;
+}
+header #brand {
+  margin:1em 0;
+}
+header #brand h1 {
+  font-weight: 900;
+  color: #565656;
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.45em;
+}
+header #brand h1 a {
+  color: #565656;
+  text-decoration: none;
+}
+header #brand h1 span {
+  font-weight: 200;
+  color: #888888;
+  text-transform: lowercase;
+}
+header nav {
+  font-family: Helvetica, sans-serif;
+}
+.menu-main-nav-container, .menu-main-container {
+  float: right;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+}
+header nav ul li {
+  float: left;
+  margin: 2px 10px 0 0;
+}
+header nav ul li a {
+  color: #888888;
+  font-size: 14px;
+}
+/* Posts/Articles
+-------------------------------------------------------------- */
+article {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #dddddd;
+}
+article .title {
+  color: #404040;
+  line-height: 56.24px;
+  font-size: 38px;
+  font-size: 3.8rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+article .title a {
+  text-decoration: none;
+  color: #404040;
+}
+article .title a:hover {
+  color: #007998;
+}
+article .post-meta {
+  margin-bottom: 40px;
+  font-size: 14px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+article .post-meta a {
+  color: #888888;
+  text-decoration: none;
+}
+article .post-meta a:hover {
+  color: rgba(136, 136, 136, 0.5);
+}
+article .the-content a {
+  font-weight: 900;
+  text-decoration: none;
+}
+article .the-content p {
+  color: #191919;
+  text-align: justify;
+}
+article .the-content img {
+  width: 100%;
+  height: auto;
+}
+article .meta {
+  line-height: 14.8px;
+  font-size: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .9px;
+}
+article .meta div {
+  margin:1px auto;
+}
+article .meta .post-categories {
+  list-style: none;
+  margin: 0 0 10px 0;
+}
+article .meta .post-categories li {
+  display: inline-block;
+  margin-right: 10px;
+}
+/* Page loop styling */
+.page article {
+  border-bottom: none;
+}
+.page article .title {
+  margin-bottom: 40px;
+}
+/* Pagination */
+#pagination {
+  margin-bottom: 40px;
+  width: 100%;
+}
+#pagination .past-page {
+  float: right;
+  width: 49%;
+  text-align:right;
+}
+#pagination .next-page {
+  float: left;
+  width: 50%;
+  border-right: 1px solid #ccc;
+  height: 200px;
+}
+.next-page a, .past-page a {
+  font-size: 2em;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  padding: 10%;
+}
+/* Comments */
+h3#comments {
+  margin-bottom: 80px;
+  font-size: 16px;
+}
+.commentlist {
+  list-style: none;
+  margin: 0;
+}
+.commentlist .comment {
+  margin: 0 0 40px 50px;
+  padding: 20px;
+  position: relative;
+  list-style: none;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.commentlist .comment .children {
+  margin-top: 40px;
+}
+.commentlist .comment-author {
+  float: left;
+  margin-right: 10px;
+}
+.commentlist .comment-author img {
+  position: absolute;
+  left: -50px;
+  top: 5px;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.commentlist .comment-author .says {
+  display: none;
+}
+.comment-meta {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.comment-subscription-form,
+.comment-subscription-form {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+#respond {
+  margin-bottom: 80px;
+}
+#respond > h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+#respond form label {
+  color: #888888;
+}
+footer {
+  text-align: center;
+  padding-bottom: 60px;
+  font-size: 12px;
+}
+/* Misc & mixens
+-------------------------------------------------------------- */
+.site-footer{
+}
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.clear {
+  clear: both;
+}
+.clear-left{
+	clear:left;
+}
+.left{
+	float: left;
+}
+.right{
+	float:right;
+}
+/* clear floats */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+
+/*Background*/
+#background{background-image: -ms-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #EEEEEE 200%);
+  /* Mozilla Firefox */ 
+  background-image: -moz-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #EEEEEE 200%);
+  /* Opera */ 
+  background-image: -o-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #EEEEEE 200%);
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(radial, center center, 0, center center, 447, color-stop(0, #FFFFFF), color-stop(2, #EEEEEE));
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #EEEEEE 200%);
+  /* W3C Markup, IE10 Release Preview */ 
+  background-image: radial-gradient(circle farthest-corner at center, #FFFFFF 0%, #EEEEEE 200%);
+
+  margin: 0;
+  padding-top: 20px;
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+}
+
+/* Page Wrap */
+.main-fluid {padding:0; margin:0;}
+.in-wrap {max-width:960px; margin:0 auto; }
+
+/* Home */
+
+#app-store {float:left; display:block;}
+	#app-store {width:150px;}
+
+#header-home {margin-top:20px;}
+#home-phone { width: 275px; float:left; display:block;}
+#logo-mobile {display:none;}
+
+	/* Home Right */
+	#home-right {max-width:480px; float:left; margin-left:80px; margin-top:100px;}
+		/*Home Content */
+		#home-content { font-weight: 300; font-family: 'Open Sans', 'robotolight', Helvetica, san serif;
+						color:#999;
+						font-size:14px;
+						margin-top:20px;
+		}
+		#home-content h2 {color:#333; font-size:30px; margin-top:20px; line-height:30px;}
+		#home-content p {font-size:16px; margin-top:10px; line-height:22px;}
+	/* Bottom Bar */
+	#bottom-bar {background:rgb(248,115,90); padding:80px 10px 110px 10px; margin-top:40px;}
+	#bottom-quote { display:block; float:left; color:white; font-weight: 300; font-family: 'Open Sans', 'robotothin', Helvetica, san serif; 
+					font-size: 24px; line-height:35px;}
+					.home-social {float:right;display:block;}
+					.home-social img {float:left; margin-right:10px;}
+					.home-social:last-child {margin-right:0px;}
+					#home-social-top {display:none; margin:0 auto;}
+/*About*/
+	#about-phone {padding-top:20px;}
+	#about-phone img {width: 275px; float:left; display:block;}
+	#about-right {max-width:360px; float:left; margin-left:80px; margin-top:80px; font-size:18px;}
+		.page-font p {color:#333; font-weight: 300; font-family: 'Open Sans', 'robotolight', Helvetica, san serif; line-height:2em;}
+	#about-line {height:1px; background: #CCC; width:80%; margin:0 auto; margin-top:-50px; }
+
+/*Privacy*/
+	
+	#privacy-text {margin-top:20px;}
+
+/*Contact*/
+
+#contact { padding: 0 20%; margin-top:20px; font-weight: 300; font-family: 'Open Sans', 'robotolight', Helvetica, sans serif; font-size:20px;}
+	#contact p { margin-bottom:20px;}
+	#contact-title {color:rgb(248,115,90);font-weight: 400; font-family: 'Open Sans', 'roboregular', Helvetica, sans serif; font-size:20px;}
+	#contact a {display:block; padding-left:5%; border-left:3px solid rgb(248,115,90);}
+
+/*Terms*/
+	/*#terms {padding:0 20px;}*/
+	#terms {margin-top:20px; font-weight: 300; font-family: 'Open Sans', 'robotolight', Helvetica, sans serif; font-size:16px;}
+	#terms-title h1 {font-weight: 400; font-family: 'Open Sans', 'roboregular', Helvetica, sans serif; font-size:36px; color:#333; font-weight:bold; display:block; padding-bottom:10px; margin-bottom:10px; border-bottom:2px solid rgb(248,115,90); max-width:550px; line-height:40px;}
+		#terms-title h2 , #terms-numbers h2 , #terms-intro h2 {font-weight: 400; font-family: 'Open Sans', 'roboregular', Helvetica, sans serif; font-size:24px; color:#333; font-weight:bold; display:block; padding-bottom:10px; margin-bottom:10px; line-height:30px;}
+		#terms-numbers div h3 {font-weight: 400; font-family: 'Open Sans', 'roboregular', Helvetica, sans serif; font-size:18px; color:#333; font-weight:bold; display:block; padding-bottom:10px; margin-bottom:10px; line-height:30px;}
+	
+	#terms-numbers ul {padding:5% 10%; display:block; background:#EDEDED; margin-bottom:20px;}
+	#terms-numbers ul li { margin-bottom:10px;}
+	
+/*FAQ*/
+#faq{margin-top:20px; font-size:16px;}
+#question {font-weight: 400; font-family: 'Open Sans', 'roboregular', Helvetica, sans serif; font-size:24px; font-weight:bold; display:block; margin-bottom:5px; line-height:30px; color:rgb(248,115,90);  }
+#answer {	 color:#666; font-weight: 300; font-family: 'Open Sans', 'robotolight', Helvetica, san serif; display:block; border-left:3px solid rgb(248,115,90); padding-left:10px;}
+
+/*Header*/
+
+#social-top {display:block; width:135px; margin:0 auto;}
+	#social-top img {float:left; margin-right:10px;}
+	
+#logo-main {margin:0 auto; display:block; padding-bottom:30px; }
+
+#page-title {background:rgb(248,115,90); color:white; font-weight: 300; font-family: 'Open Sans', 'robotolight', Helvetica, san serif;
+			 padding: 30px 0; margin-top:20px; text-transform:lowercase;}
+			 #page-title p {display:block; margin:0 auto; text-align:center; font-size:28px;}
+
+/*Subscribe*/
+	#mc_embed_signup {margin-top:20px;}
+	#mc_embed_signup mc-embedded-subscribe-form {background:transparent; padding:0;}
+	#mc_embed_signup #go-button input { background:rgb(248,115,90); }
+	#success-sub {float:left; margin-top: 10px; font-size:18px; color:rgb(248,115,90); font-weight: 400; font-family: 'Open Sans', 'robotolight', Helvetica, san serif;}
+/*Coursel*/
+
+#phone-wrap { width: 300px; float:left; display:block; background:url('images/iphone.png'); background-size:300px;
+background-repeat: no-repeat; height:640px;}
+
+
+#carousel {
+	margin-left:24px;
+	padding-top:91px;
+}
+
+#slides {
+	overflow:hidden;
+	/* fix ie overflow issue */
+	position:relative;
+	width:255px;
+	height:550px;
+	/*border:1px solid #ccc;*/
+}
+
+/* remove the list styles, width : item width * total items */	
+#slides ul {
+	position:relative;
+	left:0;
+	top:0;
+	list-style:none;
+	margin:0;
+	padding:0;	
+	width:765px;			
+}
+
+/* width of the item, in this case I put 250x250x gif */
+#slides li {
+	width:255px;
+	height:420px;	
+	float:left;
+}
+
+#slides li img {
+	padding:5px 0;
+	width:255px;
+}
+
+/* Styling for prev and next buttons */
+#buttons {
+	padding:0 0 5px 0;	
+	float:right;
+	display:none; /*don't show on page*/
+}
+
+#buttons a {
+	display:block; 
+	width:31px; 
+	height:32px;
+	text-indent:-999em;
+	float:left;
+	outline:0;
+	color:red;
+}
+
+a#prev {
+	background:url(arrow.gif) 0 -31px no-repeat; 
+}
+
+a#prev:hover {
+	background:url(arrow.gif) 0 0 no-repeat;
+}
+
+a#next {
+	background:url(arrow.gif) -32px -31px no-repeat; 
+}
+
+a#next:hover {
+	background:url(arrow.gif) -32px 0 no-repeat;
+}
+
+/* Footer */
+.site-footer {max-width:960px; margin:0 auto;}
+#footer-nav li {list-style:none; float:left; display:block; margin-right:25px; color:#666;}
+	#footer-nav li:last-child {margin-right:0;}
+#footer-copyright {display:block; float:right;}
+
+/*Software Attributions*/
+#software-attr {padding: 0 20%;}
+#software-attr h2 {margin-top:20px; margin-bottom:10px;}
+#software-attr a {display:block; margin-top:20px;padding-left:10px; border-left:3px solid rgb(248,115,90); font-size:20px; font-family: 'Open Sans', 'robotolight', Helvetica, sans serif; }
+
+
+/* #Media Queries
+================================================== */
+
+  /* Those wide screens above 1280px */
+  @media only screen and (min-width: 1281px) {
+    body{
+      font-size: 2.5em;
+      line-height: 1.5em;
+    }
+    article .title{
+      font-size: 1.8em;
+      line-height: 1.5em;
+    }
+    article .post-meta{
+      font-size: 0.7em;
+      line-height: 1em;
+    }
+    .menu-main-nav-container a, .side-title, .menu-main-container a{
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+    #sidebar{
+      font-size: 0.7em;
+      line-height: 1.5em;
+    }
+    #sidebar h3{
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+  }
+
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 959px) {
+    .side-title{
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+  }
+
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .side-title{
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+	/*Privacy*/
+	#privacy-text {padding: 0 10px;}
+	
+	/*Terms*/
+	#terms {padding:0 20px;}
+	
+	/*FAQ*/
+	#faq{padding:0 20px;}
+	
+	/*Fix Home page width issues*/
+	#home-right {margin-left:15px;}
+  }
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {
+ /*HOME*/
+    .side-title{
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+	#phone-wrap {float:none; margin: 0 auto; margin-top:20px;}
+  	#home-right {margin: 0 auto; min-width:275px; float:none;}
+		#logo-mobile {margin:0 auto; display:block; padding-bottom:30px;}
+		#logo {display:none;}
+		#home-content{margin-left: 0 auto; float:none; padding: 0px 20px;}
+
+	#app-store {margin: 0 auto; display:block; float:none;}
+
+	
+	#home-social-bottom {display:none;}
+	#home-social-top {display:block; width:135px; margin-bottom:50px;}
+	.home-social {float:none;}
+	
+	#bottom-bar {padding:80px 10px 40px 10px;}
+	#bottom-quote {float:none;display:block; position:relative; max-width: 380px; margin:0 auto; text-align:center;}
+		/*#bottom-quote p {display: block; }*/
+	
+	/*About*/
+	#about-phone {padding:0px; margin:0 auto;}
+	#phone-home {margin:0 auto;}
+	#about-right {margin: 0 auto; min-width:275px; float:none; font-size:14px;}
+	#about-line {display:none; height:0px; margin:0;}
+	#about-right {margin-top:20px; padding: 0;}
+	.page-font p {font-size: 1.5em; line-height:2em; padding: 0 10px; display:block;}
+	
+	/*Privacy*/
+	#privacy-text {padding: 0 10px;}
+	
+	/*Terms*/
+	#terms {padding:0 20px;}
+	#answer {line-height:28px;}
+	/*Footer*/
+	#footer-nav {display:block; max-width:348px; margin:0 auto; text-align:center;}
+			#footer-nav ul {margin:auto;}
+	#footer-copyright {float:none; margin:0 auto; clear:left; padding-top:10px; display:block;}
+  	
+	/*FAQ*/
+	#faq{padding:0 20px;}
+	/*Coursel*/
+	#carousel {
+	margin-left:23px;
+	padding-top:90px;
+	}
+	
+	/*Software-Attr no padding*/
+	#software-attr {padding: 0 20px;}
+
+/*Contact*/
+	
+	#contact { padding: 0 20px; margin-top:20px; font-weight: 300; font-family: 'Open Sans', 'robotolight', Helvetica, sans serif; font-size:20px; line-height:36px; margin-bottom:20px;}
+	#contact p { margin-bottom:20px;}
+	#contact-title {color:rgb(248,115,90);font-weight: 400; font-family: 'Open Sans', 'roboregular', Helvetica, sans serif; font-size:20px;}
+	#contact a {display:block; padding-left:10px; border-left:3px solid rgb(248,115,90); font-size:16px;}
+  
+  }
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    body, article .post-meta{
+      font-size: 1.2em;
+      line-height: 1.5em;
+	  
+    }
+    article .title{
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+    .site-title{
+      font-size: 10px !important;
+      line-height: 50px;
+    }
+    .menu-main-nav-container a, .side-title, .menu-main-container a{
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+	
+	
+  }
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {
+    body, article .post-meta{
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+    article .title{
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+    .site-title{
+      font-size: 6px !important;
+      line-height: 30px;
+    }
+    .menu-main-nav-container a, .side-title, .menu-main-container a{
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+  }
+  

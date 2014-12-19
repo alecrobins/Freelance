@@ -1,0 +1,439 @@
+/*
+	Colors:
+		maroon: rgb(100,20,19)
+		dark grey: rgb(50,50,50)
+		star city blue: rgb(14,118,188)
+
+*/
+
+/* Reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:none;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+	text-decoration:none;
+}
+
+body {
+    line-height:1;
+	background-color:rgb(116,22,21);
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+/*Fonts:
+
+	gotham_boldregular
+	
+	sansita_oneregular
+
+*/
+@font-face {
+    font-family: 'gotham_boldregular';
+    src: url('fonts/gotham-bold-webfont.eot');
+    src: url('fonts/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-bold-webfont.woff') format('woff'),
+         url('fonts/gotham-bold-webfont.ttf') format('truetype'),
+         url('fonts/gotham-bold-webfont.svg#gotham_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'sansita_oneregular';
+    src: url('fonts/sansitaone-webfont.eot');
+    src: url('fonts/sansitaone-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sansitaone-webfont.woff') format('woff'),
+         url('fonts/sansitaone-webfont.ttf') format('truetype'),
+         url('fonts/sansitaone-webfont.svg#sansita_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Tools*/
+.clear {clear:both;}
+.left {float:left;}
+.right {float:right;}
+
+.f-small {font-family:"gotham_boldregular"; font-size:10px; color:rgb(50,50,50); margin-bottom:5px;}
+.f-cursive{font-family:"sansita_oneregular"; font-size:14px; color:rgb(100,20,19); }
+.f-cursive-large{font-family:"sansita_oneregular"; font-size:20px; color:rgb(100,20,19); display:block;float:left;}
+.text {font-family:Arial, Helvetica, sans-serif; font-size:12px; margin-bottom:10px; line-height:20px;}
+.welcome {font-family:"sansita_oneregular"; font-size:28px; color:rgb(100,20,19); margin-bottom:10px;}
+.tax {font-size:10px; }
+
+.star-list {list-style-image:url(images/list-img.png); font-family:"sansita_oneregular"; color:rgb(70,70,70); font-size:14px;}
+	.star-list li{margin-bottom:20px;}
+
+h3 { font-family:"gotham_boldregular"; font-size:16px; color:rgb(100,20,19); letter-spacing:-1px; margin-bottom:10px; }
+h4 { font-family:"sansita_oneregular"; font-size:20px; color:rgb(14,118,188); padding-bottom:5px; margin-bottom:10px; }
+
+.blue_spc {color:rgb(14,118,188); font-size:12px;}
+
+.card { background:white; 
+		-webkit-box-shadow:  0px 0px 13px 0px rgba(0, 0, 0, 0.1);
+        box-shadow:  0px 0px 13px 0px rgba(0, 0, 0, 0.1);
+		padding:10px;
+		}
+
+/*Top-Nav*/
+#top-nav {height:20px; background:url(images/stripebg.png); background-repeat:repeat-x; border-bottom: solid 5px rgb(100,20,19); width:100%; min-width:960px;}
+	#top-nav-info{ width:960px; margin:0 auto; font-family:"gotham_boldregular"; font-size:10px; color:rgb(50,50,50); padding-top:5px;}
+		#top-nav-info-left { display:block; float:left;}
+		#top-nav-info-right { display:block; float:right; margin-left:5px;}
+			#top-nav-info-right img {margin-top:-2px; width:15px; margin-right:5px;}
+		#top-nav-info-right a {color:rgb(50,50,50); text-decoration:none;}
+		#top-nav-info-right a:hover {text-decoration:underline;}
+/*Home-Main- old*/
+#home-main {
+	background:url(images/hotair-bg.jpg) ;
+	height:585px; 
+	background-repeat:no-repeat; 
+	background-position:center;
+ 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	border-bottom:solid 5px rgb(100,20,19); 
+	min-width:960px;
+	}
+	#home-main-wrap {
+		background:rgba(255,255,255,0.9); 
+		border-top:solid 3px rgb(100,20,19);
+		border-bottom:solid 3px rgb(100,20,19);
+	 	width:100%; min-width:960px; height:145px;
+		position:absolute;
+		margin-top:330px;
+		}
+	#home-main-nav-wrap{
+		width:960px;
+		margin:0 auto;
+		}
+		.no-js nav li:hover ul { display:block; }  
+
+/*Nav*/
+nav  {
+	display: block;
+	position:relative;
+	float:right;
+	
+}
+
+nav ul {
+	margin:0; 
+	padding:0;
+	float: left;
+	list-style: none;
+/*	-moz-border-radius: .5em;
+	-webkit-border-radius: .5em;
+	border-radius: .5em;    
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+	box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset; */
+	
+	/*need if IE for border image */	
+}
+
+nav li {
+	float:left;
+	position:relative; 
+	list-style-type:none;
+	border-right: solid 1px rgb(92,10,9);
+	
+	
+}
+
+nav ul:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+
+nav a {
+	float:left;
+	padding: .2em .9em;
+	text-decoration: none;
+	color: white;
+	font-family: "gotham_boldregular";
+	font-size:16px;
+	border:none;
+	height:44px;
+line-height:44px;
+
+	background: url(images/nav-texture.png) top right, rgb(92,10,9);
+	background: url(images/nav-texture.png) top right, -moz-linear-gradient(top,  rgb(92,10,9) 0%, rgb(60,3,2) 100%);
+	background: url(images/nav-texture.png) top right, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(92,10,9)), color-stop(100%,rgb(60,3,2)));
+	background: url(images/nav-texture.png) top right, -webkit-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background: url(images/nav-texture.png) top right, -o-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background: url(images/nav-texture.png) top right, -ms-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background: url(images/nav-texture.png) top right, linear-gradient(to bottom,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c0a09', endColorstr='#3c0302',GradientType=0 );
+	background-repeat:no-repeat;
+	}
+ 
+nav a:hover, nav a:focus {
+	outline: 0;
+	text-decoration:none;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0,0,0,.2);
+	background: url(images/nav-texture-over.png) top right,  rgb(60,3,2);
+	background: url(images/nav-texture-over.png) top right,  -moz-linear-gradient(top,  rgb(60,3,2) 0%, rgb(92,10,9) 100%);
+	background: url(images/nav-texture-over.png) top right,  -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(60,3,2)), color-stop(100%,rgb(92,10,9)));
+	background: url(images/nav-texture-over.png) top right,  -webkit-linear-gradient(top,  rgb(60,3,2) 0%,rgb(92,10,9) 100%);
+	background: url(images/nav-texture-over.png) top right,  -o-linear-gradient(top,  rgb(60,3,2) 0%,rgb(92,10,9) 100%);
+	background: url(images/nav-texture-over.png) top right,  -ms-linear-gradient(top,  rgb(60,3,2) 0%,rgb(92,10,9) 100%);
+	background: url(images/nav-texture-over.png) top right,  linear-gradient(to bottom,  rgb(60,3,2) 0%,rgb(92,10,9) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c0302', endColorstr='#5c0a09',GradientType=0 );
+	background-repeat:no-repeat;
+	}
+	
+nav a span { display:block; float:rightright; margin-left:5px; }  
+
+nav a:active {
+	-moz-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+}
+ 
+/*nav li:first-child a {
+	border-left: 0;
+	-moz-border-radius: 4px 0 0 4px;
+	-webkit-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;            
+}*/
+
+nav li:last-child {
+	border-right: none;          
+}
+/* sub nav 
+nav ul ul { display:none; width:100%; position:absolute; left:0; background:#6a6a6a; }  
+nav ul ul li { float:none; }  
+nav ul ul a { padding:5px 10px; border-left:none; border-right:none; font-size:14px; }  
+nav ul ul a:hover { background-color:#555; }  */
+	
+	#nav-bar-cont {
+		height:50px; 
+			
+	background:rgb(92,10,9);
+	background: -moz-linear-gradient(top,  rgb(92,10,9) 0%, rgb(60,3,2) 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(92,10,9)), color-stop(100%,rgb(60,3,2)));
+	background:-webkit-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background:-o-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background: -ms-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background: linear-gradient(to bottom,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c0a09', endColorstr='#3c0302',GradientType=0 );
+	width:50%;
+	position:absolute;
+	top:0;
+	right:0;
+		
+	}
+/*Home*/
+#home-welcome {width:540px; float:right; padding:10px; border:solid 5px rgb(100,20,19);}
+#home-welcome .f-small {font-size:14px; line-height:24px;}
+#home-welcome .f-small a {color:rgb(50,50,50); font-style:italic; text-decoration:underline;}
+	#home-welcome .f-small a:hover {text-decoration:none;}
+	#home-welcome  img {width:45%; float:right; margin-left:15px; margin-bottom:10px;}
+
+/*Home-Main-Bottom*/
+#home-main-bottom { background:url(images/stripebg.png); background-repeat:repeat;padding-bottom:100px; }
+	#home-main-bottom-wrap{width:960px; margin:0 auto; padding-top:30px; }
+	
+	#home-main-bottom-location { width:345px; float:left;}
+	#home-main-bottom-location img { margin-bottom:10px; margin-top:10px;}
+	#home-main-bottom-location a { display:block; margin-top:10px;}
+	
+	#home-main-bottom-bulletin { width:345px; float:left; clear:left; margin-top:20px;}
+	
+/*Footer*/
+footer {width:100%; background-image:url(images/footer-bg.jpg); background-repeat:repeat; height:100px; border-top: 5px solid rgb(68,1,1); }
+#footer-wrap {width:960px; margin:0 auto; padding-top:10px;}
+	#footer-left {float:left;}
+		#footer-left ul {float:right; margin-top:5px;}
+		#footer-left li {float:left; display:block; list-style:none;}
+			#footer-left li a {color:white; font-family:'gotham_boldregular'; font-size:12px; margin-left:20px;}
+	#footer-right {float:right;}
+		#footer-right p {font-family:'gotham_boldregular'; font-size:10px; color:white; float:right; clear:right; margin-bottom:5px; }
+			#footer-right #footer-number {font-size:16px;}
+/*Page-Top*/
+.page-top { 
+			
+			min-width:960px; 
+			max-width:1400px;
+			margin:0 auto;
+			height:450px; 
+			
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+    		-o-background-size: cover;
+    		background-size: cover;
+			background-repeat:no-repeat; 
+			background-position: center center; 
+			border-bottom: solid 5px rgb(100,20,19);
+			}
+#page-top-cont {
+		height:50px; 
+			
+	background:rgb(92,10,9);
+	background: -moz-linear-gradient(top,  rgb(92,10,9) 0%, rgb(60,3,2) 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(92,10,9)), color-stop(100%,rgb(60,3,2)));
+	background:-webkit-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background:-o-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background: -ms-linear-gradient(top,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	background: linear-gradient(to bottom,  rgb(92,10,9) 0%,rgb(60,3,2) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c0a09', endColorstr='#3c0302',GradientType=0 );
+	width:40%;
+	position:absolute;
+	right:0;
+	top:25px;
+	
+
+	}
+	/*960px and less */
+	@media screen and (max-width: 960px) {
+	
+		#page-top-cont {
+			display:none;
+		}
+
+	}			
+		/*Backgrounds*/
+		#page-top-res{background-image:url(images/room-rates-bg.jpg);}
+		#page-top-roomrates {background-image:url(images/room-rates-bg.jpg);}
+		#page-top-nav { margin:0 auto; width:960px; min-width:960px;}	
+		#page-top-home {background-image:url(images/bg-3.jpg);}
+		#page-top-location {background-image:url(images/location-bg.jpg);}
+		#page-top-about {background-image:url(images/starcity_frontdesk.jpg);}
+		#page-top-booking {height:200px; background-image:url(images/stripebg.png); background-repeat:repeat;
+		-webkit-background-size: auto;
+			-moz-background-size: auto;
+    		-o-background-size: auto;
+    		background-size: auto; border:none;}
+		
+
+/*Cards*/
+#reservation-card {width:280px; margin-bottom:20px; padding-bottom:40px;}
+	#reservation-card img {float:left;}
+#gds-card {width:280px;}
+#room-rates-brief {width: 610px; float:right;}
+	.room-rate-brief-card { padding-bottom:20px; border-bottom:1px solid #CCC; margin-bottom:20px; position:relative;}
+	#room-rate-brief-card-last {border:none; margin:0;}
+	#room-rate-img {float:left; margin-right:20px; width:45%;}
+	
+	.room-rate-title img {margin-right:5px;margin-top:2px;}
+
+	/*Hotel-Accomm*/
+	#hotel-accom {margin-bottom:20px;}
+	#hotel-accom p {width:360px; float:left;}
+	/*#hotel-accom ul {float:left; width:140px; margin-left:30px;}*/
+	#hotel-accom-pic {float:right; width:560px;}
+		#hotel-accom-pic img {float:right; margin-left:10px;}
+	
+	/*Room-Rates*/
+	#room-rate-img-main {float:left; margin-right:10px; width:35%;}
+	
+	#room-rate-info {width:480px; float:left;}
+		#room-rate-info ul {float:right; width:200px;}
+		#room-rate-info-top p {width:230px; float:left;}
+		#room-rate-info-bottom {width:240px; margin-top:10px;}
+			#room-rate-info-bottom img {margin-top:10px;}
+		/*Slideshow*/
+			
+				#room-rate-info-pic #room-slideshow {
+					position:relative;
+					height:350px;
+					
+					overflow:hidden;
+				}
+				
+				#room-rate-info-pic #room-slideshow IMG {
+					position:absolute;
+					top:0;
+					left:0;
+					z-index:8;
+					width:320px;
+				}
+				
+				#room-rate-info-pic #room-slideshow IMG.active {
+					z-index:10;
+				}
+				
+				#room-rate-info-pic #room-slideshow IMG.last-active {
+					z-index:9;
+				}
+		#room-rate-info-pic { position:absolute; width:80%;margin-left:600px;}
+			#room-rate-info-pic img {margin-bottom:10px; width:45%; float:right; clear:right;}
+		#room-rate-info-pic-double-d { position:absolute; width:35%; right:0;}
+			#room-rate-info-pic-double-d img {margin-bottom:10px; width:100%; float:right; clear:right;}
+				
+	.room-rates-price {position:absolute; right:0; bottom:0; padding-right:10px; padding-bottom:20px; width:50%}
+	
+	/*Location*/
+	#location-card { width:540px; float:right;}
+	.location-card-content { border-bottom: solid 1px #CCCCCC; margin-top:20px; padding-bottom:20px;}
+	.location-pic {width:45%;  overflow:hidden; position:relative; float:right;}
+		.location-pic img { width:90%;  }
+		.location-pic #casino {width:80%; top:-20px; left:15%}
+	.location-info { width: 45%; float:left;}
+		.location-info .text { margin-top:10px;}
+		.location-info a {font-family: "sansita_oneregular"; font-size:12px; color:rgb(14,118,188); }
+	
+			
+/*Home Bulletin*/
+
+#features img {width:100%; margin:0 auto;}
+.jshowoff-controls {display:none;}
+#bulletin-buttons { margin-left:45%;color:red; margin-top:10px;}
+	#bulletin-buttons a { display:block; 
+	/* Hide the text. */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;background-image:url('images/bulletin-dot.png'); height:10px; background-repeat:no-repeat; width:10px; float:left;}
+		#bulletin-buttons a:hover{background-image:url('images/bulletin-dot-over.png')}
+
+/*Booking*/
+.text3 { color:red !important;}
+#booking-card {padding-top:120px;}
+#booking-card iframe {margin:0 auto;}

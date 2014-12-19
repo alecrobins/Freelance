@@ -1,0 +1,904 @@
+@import url(http://fonts.googleapis.com/css?family=Karla|Quicksand);
+@import url('styles/boots-bones.css');
+/*
+Theme Name: TrendingSounds Theme
+Theme URI: 
+Author: Alec Robins
+Author 
+Description: A theme for Trending Sounds
+Version: 1.0
+License: GNU General Public License
+
+-------------------------------------------------------------- */
+/* Reset
+-------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+
+}
+
+
+/* Styles 
+================================================== */
+
+* {
+	font-family: 'Open Sans', sans-serif;
+  }
+
+a {
+	color: inherit;
+	text-decoration: none;
+	}
+
+h2 { font-size: 36px;}
+
+body {background: url('images/bg-footer.jpg') repeat; }
+
+.clear { clear:both; }
+
+#mobileMenu {
+	position: fixed;
+	width:100%;
+	z-index:10000000;
+	left: 20px;
+	top: 5px;
+	color: white;
+	font-size:20px;
+	display: none;
+	}
+#mobileMenuHeader{
+	float:left;
+	color: #CCC;
+	font-size:25px;
+	display: none;
+	margin-left:5px;
+	margin-right:5px;
+	}
+	
+/* Wraps */
+
+.wrap {
+	max-width: 1080px;
+	margin: 0 auto;
+	
+	}
+
+/*Page Template*/
+.pageBg { padding: 20px 0; height: 100vh;}
+.pageTitle .wrap { padding:0;}
+.pageTitle h1 { font-weight: 700; color:white; font-size:80px; font-family: 'Open Sans', sans-serif; letter-spacing:-5px;}
+#weddingPageTitle h1 { margin: 0;}
+#wrapContent .col-md-5 { }
+#wrapContent .col-md-5 .pageInfo {
+		margin-top: 20px;
+		padding: 20px;
+		color:white;
+		font-size:16px;
+		line-height:26px;
+	}
+.pageInfo {margin-top: 20px;
+		padding: 20px;
+		color:white;
+		font-size:16px;
+		line-height:26px;
+		}
+			
+	#wrapContent .col-md-5 p {
+		 	margin-bottom: 20px;
+		}
+	#wrapContent .col-md-5 p:last-child {
+		margin-bottom: 0px;
+	}
+.contactButton { margin-top:20px; padding:10px; width:50%;}
+	
+.contactButton { font-size:24px; color:white; text-transform:uppercase; font-weight:700; border:none; text-align:left; }
+
+/*Home - Section Backgrounds */
+	
+	/* HomeLanding */
+	#homeLandingSection { 
+	/*background: url('images/bg-footer.jpg') repeat;*/
+	background:url('images/bg-home.jpg') no-repeat center left fixed;
+		-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+	   height: 100vh;
+	   min-width:100%;
+		}
+	#homeLandingLogo { padding-top:5%; vertical-align:middle; margin: 0 auto; width:500px; }    
+	#homeLandingSection p { color:white; margin-top: 10px; font-family: 'Open Sans', sans-serif; }
+	.homeLandingOptions div { border-right: solid 3px rgba(255,255,255,0.5);
+							  text-align:center;
+							  color:white;						  
+							  padding:20px;
+							  margin-top:20px;
+							  font-family: 'Open Sans', sans-serif;
+							  font-weight:400;
+							  height:100px;
+							  }
+	.homeLandingOptions div a {color: white;}				  
+	.homeLandingOptions div:last-child { border: none;} 	
+
+/*Sliders*/
+.pageSlider { padding-top:20px;}
+/*Wedding Page*/
+	/*Page-Title*/
+	#weddingPageTitle {
+	background: -moz-linear-gradient(left,  rgba(51,50,117,1) 0%, rgba(229,229,229,0) 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(51,50,117,1)), color-stop(100%,rgba(229,229,229,0))); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(left,  rgba(51,50,117,1) 0%,rgba(229,229,229,0) 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(left,  rgba(51,50,117,1) 0%,rgba(229,229,229,0) 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(left,  rgba(51,50,117,1) 0%,rgba(229,229,229,0) 100%); /* IE10+ */
+
+background: linear-gradient(to right,  rgba(51,50,117,1) 0%,rgba(229,229,229,0) 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333275', endColorstr='#00e5e5e5',GradientType=1 ); /* IE6-9 */
+
+		background-size: 500px 1000px;
+		background-repeat: no-repeat;
+		}
+	#weddingInfo { background: rgba(51, 50, 117, 0.6);}
+	#weddingBg { background:url('images/bg-wedding.jpg') no-repeat;
+		background-size: 100%;
+   height:800px;
+	   }
+	 
+	#contactButtonWedding {background: rgb(66,65,134);
+
+background: -moz-linear-gradient(top,  rgba(66,65,134,1) 0%, rgba(51,50,117,1) 100%);
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(66,65,134,1)), color-stop(100%,rgba(51,50,117,1)));
+
+background: -webkit-linear-gradient(top,  rgba(66,65,134,1) 0%,rgba(51,50,117,1) 100%);
+
+background: -o-linear-gradient(top,  rgba(66,65,134,1) 0%,rgba(51,50,117,1) 100%);
+
+background: -ms-linear-gradient(top,  rgba(66,65,134,1) 0%,rgba(51,50,117,1) 100%);
+
+background: linear-gradient(to bottom,  rgba(66,65,134,1) 0%,rgba(51,50,117,1) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424186', endColorstr='#333275',GradientType=0 ); display: block;}
+	#contactButtonWedding:hover {background: rgb(51,50,117);
+
+background: -moz-linear-gradient(top,  rgba(51,50,117,1) 0%, rgba(66,65,134,1) 100%);
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,50,117,1)), color-stop(100%,rgba(66,65,134,1)));
+
+background: -webkit-linear-gradient(top,  rgba(51,50,117,1) 0%,rgba(66,65,134,1) 100%);
+
+background: -o-linear-gradient(top,  rgba(51,50,117,1) 0%,rgba(66,65,134,1) 100%);
+
+background: -ms-linear-gradient(top,  rgba(51,50,117,1) 0%,rgba(66,65,134,1) 100%);
+
+background: linear-gradient(to bottom,  rgba(51,50,117,1) 0%,rgba(66,65,134,1) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333275', endColorstr='#424186',GradientType=0 ); }
+	
+	#contactInfoWrap { padding: 0;}
+	 	/*Slider Override*/
+	#weddingSlider .rsDefault, .rsDefault .rsOverflow, .rsDefault .rsSlide, .rsDefault .rsVideoFrameHolder, .rsDefault {background: rgba(51, 50, 117, 0.3) !important;}   
+	
+	#weddingSlider .rsDefault .rsThumbs {background: rgb(51, 50, 117) !important;}   
+	#weddingSlider .rsDefault .rsThumb.rsNavSelected  {background: rgba(255,255,255,0.85) !important;} 
+	
+/*Mitzvah Page*/ 
+#mitzvahBg { background:url('images/bg-mitzvah.jpg') no-repeat;
+		background-size: 100%;
+   height:780px;}
+   #mitzvahPageTitle {background: -moz-linear-gradient(left,  rgba(27,181,230,1) 0%, rgba(125,185,232,0) 100%);
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(27,181,230,1)), color-stop(100%,rgba(125,185,232,0)));
+
+background: -webkit-linear-gradient(left,  rgba(27,181,230,1) 0%,rgba(125,185,232,0) 100%);
+
+background: -o-linear-gradient(left,  rgba(27,181,230,1) 0%,rgba(125,185,232,0) 100%);
+
+background: -ms-linear-gradient(left,  rgba(27,181,230,1) 0%,rgba(125,185,232,0) 100%);
+
+background: linear-gradient(to right,  rgba(27,181,230,1) 0%,rgba(125,185,232,0) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1bb5e6', endColorstr='#007db9e8',GradientType=1 );
+		background-size: 700px 1000px;
+		background-repeat: no-repeat; }
+   #mitzvahInfo { background: rgba(27, 181, 230, 0.6);}
+   #contactButtonMitzvah {background: rgb(37,214,240);
+
+background: -moz-linear-gradient(top,  rgba(37,214,240,1) 0%, rgba(27,181,230,1) 100%);
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(37,214,240,1)), color-stop(100%,rgba(27,181,230,1)));
+
+background: -webkit-linear-gradient(top,  rgba(37,214,240,1) 0%,rgba(27,181,230,1) 100%);
+
+background: -o-linear-gradient(top,  rgba(37,214,240,1) 0%,rgba(27,181,230,1) 100%);
+
+background: -ms-linear-gradient(top,  rgba(37,214,240,1) 0%,rgba(27,181,230,1) 100%);
+
+background: linear-gradient(to bottom,  rgba(37,214,240,1) 0%,rgba(27,181,230,1) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25d6f0', endColorstr='#1bb5e6',GradientType=0 ); display: block;}
+	#contactButtonMitzvah:hover {background: rgb(27,181,230);
+
+background: -moz-linear-gradient(top,  rgba(27,181,230,1) 63%, rgba(37,214,240,1) 100%);
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(63%,rgba(27,181,230,1)), color-stop(100%,rgba(37,214,240,1)));
+
+background: -webkit-linear-gradient(top,  rgba(27,181,230,1) 63%,rgba(37,214,240,1) 100%);
+
+background: -o-linear-gradient(top,  rgba(27,181,230,1) 63%,rgba(37,214,240,1) 100%);
+
+background: -ms-linear-gradient(top,  rgba(27,181,230,1) 63%,rgba(37,214,240,1) 100%);
+
+background: linear-gradient(to bottom,  rgba(27,181,230,1) 63%,rgba(37,214,240,1) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1bb5e6', endColorstr='#25d6f0',GradientType=0 );}
+ 
+ /*Slider Override*/
+	#mitzvahSlider .rsDefault, #mitzvahSlider  .rsDefault .rsOverflow {background: rgba(27, 181, 230, 0.3) !important;}   
+	
+	#mitzvahSlider .rsDefault .rsThumbs {background: rgb(27, 181, 230) !important;}   
+	#mitzvahSlider .rsDefault .rsThumb.rsNavSelected  {background: rgba(255,255,255,0.85) !important;}
+ 
+/*Events Page*/ 
+#eventsBg { background:url('images/bg-events.jpg') no-repeat;
+background-size: 100%;
+   height:780px;}
+   #eventsPageTitle {background: -moz-linear-gradient(left,  rgba(29,137,200,1) 0%, rgba(37,214,240,0) 100%);
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(29,137,200,1)), color-stop(100%,rgba(37,214,240,0)));
+
+background: -webkit-linear-gradient(left,  rgba(29,137,200,1) 0%,rgba(37,214,240,0) 100%);
+
+background: -o-linear-gradient(left,  rgba(29,137,200,1) 0%,rgba(37,214,240,0) 100%);
+
+background: -ms-linear-gradient(left,  rgba(29,137,200,1) 0%,rgba(37,214,240,0) 100%);
+
+background: linear-gradient(to right,  rgba(29,137,200,1) 0%,rgba(37,214,240,0) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d89c8', endColorstr='#0025d6f0',GradientType=1 );
+					background-size: 700px 1000px;
+					background-repeat: no-repeat; }	
+   #eventsInfo { background: rgba(29, 137, 200, 0.6);}
+   #contactButtonEvents {background: rgb(52,165,230);
+
+background: -moz-linear-gradient(top,  rgba(52,165,230,1) 0%, rgba(29,137,200,1) 100%);
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(52,165,230,1)), color-stop(100%,rgba(29,137,200,1)));
+
+background: -webkit-linear-gradient(top,  rgba(52,165,230,1) 0%,rgba(29,137,200,1) 100%);
+
+background: -o-linear-gradient(top,  rgba(52,165,230,1) 0%,rgba(29,137,200,1) 100%);
+
+background: -ms-linear-gradient(top,  rgba(52,165,230,1) 0%,rgba(29,137,200,1) 100%);
+
+background: linear-gradient(to bottom,  rgba(52,165,230,1) 0%,rgba(29,137,200,1) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34a5e6', endColorstr='#1d89c8',GradientType=0 ); display:block;}
+   #contactButtonEvents:hover {background: rgb(29,137,200);
+
+background: -moz-linear-gradient(top,  rgba(29,137,200,1) 0%, rgba(52,165,230,1) 100%);
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(29,137,200,1)), color-stop(100%,rgba(52,165,230,1)));
+
+background: -webkit-linear-gradient(top,  rgba(29,137,200,1) 0%,rgba(52,165,230,1) 100%);
+
+background: -o-linear-gradient(top,  rgba(29,137,200,1) 0%,rgba(52,165,230,1) 100%);
+
+background: -ms-linear-gradient(top,  rgba(29,137,200,1) 0%,rgba(52,165,230,1) 100%);
+
+background: linear-gradient(to bottom,  rgba(29,137,200,1) 0%,rgba(52,165,230,1) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d89c8', endColorstr='#34a5e6',GradientType=0 );}
+	
+	 /*Slider Override*/
+	#eventsSlider .rsDefault, #eventsSlider  .rsDefault .rsOverflow {background: rgba(29, 137, 200, 0.3) !important;}  
+	
+	#eventsSlider .rsDefault .rsThumbs {background: rgb(29, 137, 200) !important;}   
+	#eventsSlider .rsDefault .rsThumb.rsNavSelected  {background: rgba(255,255,255,0.85) !important;}
+
+#formWrap {background:green;}
+
+/*Contact Page*/
+
+#contactBg{ background:url('images/bg-contact.jpg') no-repeat;
+background-size: 100%;
+   height:820px;
+   }
+   #contactPageTitle {background: -moz-linear-gradient(left,  rgba(113,18,113,1) 0%, rgba(255,255,255,0) 100%);
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(113,18,113,1)), color-stop(100%,rgba(255,255,255,0)));
+
+background: -webkit-linear-gradient(left,  rgba(113,18,113,1) 0%,rgba(255,255,255,0) 100%);
+
+background: -o-linear-gradient(left,  rgba(113,18,113,1) 0%,rgba(255,255,255,0) 100%);
+
+background: -ms-linear-gradient(left,  rgba(113,18,113,1) 0%,rgba(255,255,255,0) 100%);
+
+background: linear-gradient(to right,  rgba(113,18,113,1) 0%,rgba(255,255,255,0) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#711271', endColorstr='#00ffffff',GradientType=1 );
+ background-size: 500px 1000px; background-repeat: no-repeat; }
+ 
+ #contactRight {  margin-top: 20px; background: rgba(97, 16, 78, 0.6); padding:20px;}
+ #contactRight h3 { color:white; font-size:36px; font-weight: 700; margin-bottom:20px;}
+ #contactRight #contactAddress { color:white; font-size:24px;}
+ 	#contactRight #contactAddress p { display:block; margin-bottom:20px;}
+ 
+ #contactInfo { padding-top:0;}
+ 
+ #contactInfo #cntctfrm_thanks {margin-top: 20px !important; 
+ 								background: rgba(97, 16, 78, 0.6) !important; 
+								padding:20px !important;
+								color: white !important;
+								font-size: 24px; }
+ 
+ #contactInfo form { margin-top: 20px; background: rgba(97, 16, 78, 0.6); padding:20px;}
+ #contactInfo form label { float:left !important;
+ 							display: block !important;
+							color:white !important;
+							width:150px !important;
+							margin-bottom: 5px !important;
+							font-size:14px !important;}
+ #contactInfo form input, #contactInfo form textarea { margin-bottom:10px !important; 
+ 						   padding:10px !important;
+						   font-size:14px !important;
+						   width:100% !important;
+						   color: black !important;
+						  }	
+   
+ #contactInfo form input[type="submit"] { border:none !important; 
+ 										  background: rgb(97, 16, 78) !important;
+										  color: white !important; 
+										  font-size:24px !important; 
+										  text-transform:uppercase !important; 
+										  font-weight:700 !important;
+										  text-align:left !important;
+										   background: none !important;
+										   margin-bottom:0 !important;
+										   /*background: rgb(125,19,100) !important;
+
+background: -moz-linear-gradient(top,  rgba(125,19,100,1) 0%, rgba(113,18,113,1) 100%) !important;
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,19,100,1)), color-stop(100%,rgba(113,18,113,1))) !important;
+
+background: -webkit-linear-gradient(top,  rgba(125,19,100,1) 0%,rgba(113,18,113,1) 100%) !important;
+
+background: -o-linear-gradient(top,  rgba(125,19,100,1) 0%,rgba(113,18,113,1) 100%) !important;
+
+background: -ms-linear-gradient(top,  rgba(125,19,100,1) 0%,rgba(113,18,113,1) 100%) !important;
+
+background: linear-gradient(to bottom,  rgba(125,19,100,1) 0%,rgba(113,18,113,1) 100%) !important;
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d1364', endColorstr='#711271',GradientType=0 ) !important;
+  */
+  											}
+										
+ 
+ /*#contactInfo form input[type="submit"]:hover { background: rgb(113,18,113) !important;
+
+background: -moz-linear-gradient(top,  rgba(113,18,113,1) 0%, rgba(125,19,100,1) 100%) !important;
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(113,18,113,1)), color-stop(100%,rgba(125,19,100,1))) !important;
+
+background: -webkit-linear-gradient(top,  rgba(113,18,113,1) 0%,rgba(125,19,100,1) 100%) !important;
+
+background: -o-linear-gradient(top,  rgba(113,18,113,1) 0%,rgba(125,19,100,1) 100%) !important;
+
+background: -ms-linear-gradient(top,  rgba(113,18,113,1) 0%,rgba(125,19,100,1) 100%) !important;
+
+background: linear-gradient(to bottom,  rgba(113,18,113,1) 0%,rgba(125,19,100,1) 100%) !important;
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#711271', endColorstr='#7d1364',GradientType=0 ) !important; 
+												border: solid 1px white !important;}*/
+  /*About*/
+  #aboutBg {background:url('images/bg-about-new.jpg') no-repeat;
+		background-size: 100%;
+   height:800px;}
+  #aboutPageTitle {background: -moz-linear-gradient(left,  rgba(25,18,94,1) 0%, rgba(255,255,255,0) 100%);
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(25,18,94,1)), color-stop(100%,rgba(255,255,255,0)));
+
+background: -webkit-linear-gradient(left,  rgba(25,18,94,1) 0%,rgba(255,255,255,0) 100%);
+
+background: -o-linear-gradient(left,  rgba(25,18,94,1) 0%,rgba(255,255,255,0) 100%);
+
+background: -ms-linear-gradient(left,  rgba(25,18,94,1) 0%,rgba(255,255,255,0) 100%);
+
+background: linear-gradient(to right,  rgba(25,18,94,1) 0%,rgba(255,255,255,0) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19125e', endColorstr='#00ffffff',GradientType=1 );
+ background-size: 500px 1000px;
+		background-repeat: no-repeat; }
+   #aboutInfo { background: rgba(25, 18, 94, 0.6); }
+   #aboutInfo p { margin-bottom:20px;}
+  
+  /*Testimonials*/
+  .testimonials-widget { background: rgba(104,20,58,0.6); width: 22%; margin-right:3%; float:right; display:block; height:300px; margin-bottom:20px; padding:20px; text-align:center; position:relative;}
+  .testimonials-widget blockquote p { color:white; font-size:14px;}
+  .testimonials-widget img { margin: 0 auto; display:block;}
+   .author { color: white; font-weight:700; font-size:14px; display:block; margin-top:5px;}
+  
+  #testimonialsPageTitle {background: -moz-linear-gradient(left,  rgba(104,20,58,1) 0%, rgba(255,255,255,0) 100%);
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(104,20,58,1)), color-stop(100%,rgba(255,255,255,0)));
+
+background: -webkit-linear-gradient(left,  rgba(104,20,58,1) 0%,rgba(255,255,255,0) 100%);
+
+background: -o-linear-gradient(left,  rgba(104,20,58,1) 0%,rgba(255,255,255,0) 100%);
+
+background: -ms-linear-gradient(left,  rgba(104,20,58,1) 0%,rgba(255,255,255,0) 100%);
+
+background: linear-gradient(to right,  rgba(104,20,58,1) 0%,rgba(255,255,255,0) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68143a', endColorstr='#00ffffff',GradientType=1 ); background-size: 700px 1000px; background-repeat: no-repeat; }
+  #testimonialsBg { height:860px; background:url('images/bg-testimonials.jpg') no-repeat;
+			background-size:100%;
+		   min-width:100%;}
+  
+  /*Philanthropy*/
+  #philanthropyBg {background:url('images/bg-fundraiser.jpg') no-repeat;
+		background-size: 100%;
+	   	height: 840px;
+		min-width:100%;}
+  #philanthropyPageTitle {
+	  background: -moz-linear-gradient(left,  rgba(243,127,14,1) 0%, rgba(255,255,255,0) 100%);
+
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(243,127,14,1)), color-stop(100%,rgba(255,255,255,0)));
+
+background: -webkit-linear-gradient(left,  rgba(243,127,14,1) 0%,rgba(255,255,255,0) 100%);
+
+background: -o-linear-gradient(left,  rgba(243,127,14,1) 0%,rgba(255,255,255,0) 100%);
+
+background: -ms-linear-gradient(left,  rgba(243,127,14,1) 0%,rgba(255,255,255,0) 100%);
+
+background: linear-gradient(to right,  rgba(243,127,14,1) 0%,rgba(255,255,255,0) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f37f0e', endColorstr='#00ffffff',GradientType=1 );
+background-size: 800px 1000px;
+background-repeat: no-repeat; 
+	  }
+	  
+   #philanthropyInfo { background: rgba(243, 127, 14, 0.8); text-align:center; }
+  
+  /*Blog*/
+  #blogBg {padding-top: 10px; padding-bottom:10px;}
+ .blogFullBg {background: rgb(255,255,255);
+
+background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(219,219,219,1) 100%);
+
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(219,219,219,1)));
+
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%);
+
+background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%);
+
+background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%);
+
+background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(219,219,219,1) 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=1 );}
+   .title { font-weight: 700; font-size:36px; display:block; color:rgb(39, 169, 255); margin-bottom: 5px;}
+   .title a { text-decoration:none; }
+   #blogPost { width:100%; background:white; display: block;
+   				-webkit-box-shadow: 0px 0px 20px 7px rgba(56,56,56,0.17);
+				-moz-box-shadow: 0px 0px 20px 7px rgba(56,56,56,0.17);
+				box-shadow: 0px 0px 20px 7px rgba(56,56,56,0.17);
+				margin-top: 20px;
+				margin-bottom:10px;
+				padding: 20px;
+}
+
+   .blogPostImg img {float:right;display:block; width:40%; height:auto;}
+   .blogPostContent { width: 45%; float:left; font-family: 'Open Sans', sans-serif; font-size:12px; line-height:28px; display:inherit;}
+   .blogPostContent #readMore a {color:rgb(39, 169, 255);}
+   .blogPostContent #readMore a:hover {color: #666;}
+   
+   .blogPostDate {color: #999; margin:10px 0;}
+   .blogPostDate p {float:left; color:#333; margin-right:5px;}
+   
+   #pagination {text-align:center; color:rgb(39, 169, 255); display:block; font-size:14px;}
+   
+   /*Single*/
+   #backToBlog a { background:rgb(39, 169, 255); color: white; font-size:10px; display:block;
+   font-family: 'Open Sans', sans-serif; width:80px; padding:5px; margin-bottom:5px;}
+   
+   #singleBg { background: rgba(255,255,255,0.95); padding:20px; }
+   			/*Single*/
+			.singleContent p { 'Open Sans', sans-serif; font-size:12px; line-height:20px; margin-bottom: 20px;}
+			.singlePostMeta { margin: 10px 0;}
+
+/*Fundraisers*/
+#fundraiserWrap { background: rgba(243, 127, 14, 0.8); margin-top:20px; height: 275px; padding: 0; width:30%;					
+					float:left; margin-right:5%;}
+#fundraiserWrap:nth-child(4n+0){ margin-right:0;}
+
+.fundraiserContent { padding:5px; }
+.fundraiserContent h3 { display:block; color:white; font-size:18px; font-family: 'Open Sans', sans-serif;
+						font-weight: 700; }
+.fundraiserContent h3 a:hover { text-decoration:none; color: rgb(39, 169, 255);}					
+
+.fundraiserContent p { color: white; font-family: 'Open Sans', sans-serif; font-size:12px;} 
+
+
+.fundraiserImg { width:100%; height:175px; overflow:hidden; position:relative;}
+.fundraiserImg img { width: 100%; height:auto;}
+
+ /*Header*/
+ #pageHeaderBg { background:url('images/bg-header.jpg') repeat;}
+ #pageHeader { padding: 20px 0;}
+  #headerLogo { float:left;}
+  	#headerLogo a { display:block;}
+	#headerLogo a img { display:block; width:300px;}
+ .headerNav { float:right; margin-top:20px;}
+ 
+ .headerNav li { display: block;
+		list-style:none;
+		float: left;
+		color: black; 
+		margin-right: 20px;}
+		.headerNav li a { color:#3d3d3d; font-size: 14px;}
+		.headerNav a:hover { color: #0CF; text-decoration:none;}
+  #socialIcons table { margin-left:25px; }
+  #socialIcons table td { width:40px; padding-bottom:20px;}
+  #socialIcons table td:first-child { padding-right:20px;}
+  
+  #pushOverride a {padding: 0; border:none;}
+  #pushOverride a:hover { background:none;}
+ /*Footer*/
+ 
+#footer { background: url('images/bg-footer.jpg') repeat;
+		 padding: 20px 0;
+		  }
+#footerLeft { float:left;}
+.listSocial { margin-top:10px;}
+.listSocial li {
+		 display: block;
+		 list-style: none;
+		 float: left;
+		 margin-right:20px;
+	}  
+.footerNav {margin-top:8px;}
+.footerNav li {
+		display: block;
+		list-style:none;
+		float: left;
+		color: white; 
+		margin-right: 20px;
+	}
+	.footerNav a { color: white; font-size:14px;} 	
+	
+	.footerNav a:hover { color: #0CF; text-decoration:none;} 	
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+
+/* #Media Queries
+================================================== */
+
+  /* Those wide screens above 1280px */
+  @media only screen and (min-width: 1281px) {
+	
+  }
+
+  /* Smaller than standard 960 (devices and browsers) */
+  @media only screen and (max-width: 991px) {
+	  
+	   .homeLandingOptions h2 { font-size:14px; }
+	   .homeLandingOptions div {padding: 10px; margin-top:0; margin-bottom:5px;}
+	  
+		#wrapContent { padding-bottom: 20px;}
+	  	.wrap {padding: 0 20px;}
+		.homeLandingOptions div { border-right: none; border-bottom: solid 3px rgba(255,255,255,0.5); font-size:2em; height: auto; min-height: none;}
+		
+		#pageHeader { padding: 10px 0;}
+		
+		/*show menu icon*/
+		#mobileMenu { display: inherit;} 
+		#mobileMenuHeader { display: inherit;}
+		/*hide footer*/
+		#footer { display: none;}
+		/*hide header nav*/
+		.headerNav { display:none;}
+		#headerLogo { float:none; margin:0 auto;}
+		#headerLogo a { margin:0 auto; max-width:380px;}
+		#headerLogo a img { width:80%; margin:0 auto;}
+		
+		/*PageTemplate*/
+		.pageTitle .wrap { padding:0 20px;}
+		.pageTitle h1 { font-size: 48px; letter-spacing:-2px;}
+		.contactButton { width:100%; text-align:center;}
+		
+		#aboutInfo {font-size:12px; line-height:18px;}
+		
+		.testimonials-widget { width:100%; height:auto; margin-right:0;}
+		
+		.homeLandingOptions div { height: auto;}
+		
+		#contactRight #contactAddress p { font-size:18px;}
+		
+		 #philanthropyBg { height: 100vh; }
+		 
+		 /*BG fix*/
+		 #weddingBg {/*
+			 background:url('images/bg-wedding-new.jpg')  no-repeat center center fixed;
+		-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	   -o-background-size: cover;
+	   background-size: cover;
+	   height: 100vh;
+		   min-width:100%;
+		   */
+			 background: url('images/bg-footer.jpg') repeat;
+			 }
+			 
+		#mitzvahBg {
+			/*
+				  background:url('images/bg-mitzvahs.jpg')  no-repeat center center fixed;
+				-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			   -o-background-size: cover;
+			   background-size: cover;
+			   height: 100vh;
+				   min-width:100%;
+				   */
+				  background: url('images/bg-footer.jpg') repeat;
+				 }
+				 
+		 #eventsBg {
+			 /*
+			 background:url('images/bg-events.jpg')  no-repeat center center fixed;
+				-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			   -o-background-size: cover;
+			   background-size: cover;
+			   height: 100vh;
+				   min-width:100%;
+				   */
+				   background: url('images/bg-footer.jpg') repeat;
+			 }
+		
+		#philanthropyBg {
+			/*
+			background:url('images/bg-philanthropy.jpg') no-repeat center center fixed;
+				-webkit-background-size: cover;
+			   -moz-background-size: cover;
+			   -o-background-size: cover;
+			   background-size: cover;
+			   height: 100vh;
+				   min-width:100%;
+				   */
+				 background: url('images/bg-footer.jpg') repeat;
+		}
+		
+		#aboutBg {
+			
+				 background: url('images/bg-footer.jpg') repeat;
+		}
+		
+		#contactBg {  background: url('images/bg-footer.jpg') repeat; }
+	    .blogFullBg {  background: url('images/bg-footer.jpg') repeat; }
+  /* Tablet Portrait size to standard 960 (devices and browsers) */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .fundraiserImg { width:100%; height:120px; }
+  }
+
+  /* All Mobile Sizes (devices and browser) */
+  @media only screen and (max-width: 767px) {
+	#fundraiserWrap {float: none; width: 100%;}
+ 	/*hide blog post content*/
+			.blogPostContent{display:none;}
+			.title {font-size:24px;}
+  }
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+   
+	
+  }
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {
+    
+	
+  }
+  
+ 

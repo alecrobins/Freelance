@@ -1,0 +1,40 @@
+.home_bottom p {
+	position:absolute; 
+	display:block; 
+	float:right; 
+	z-index:100000; 
+	margin-left:auto;
+	display:block; 
+	color:white; 
+	font-family:'geosanslightregular',Arial;
+	font-size:18px;
+	width:100px;
+	margin-left:200px;
+	text-align:center;
+	padding:5px;
+	/*Fix Background*/
+	 background:transparent;
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#65000000,endColorstr=#65000000); 
+   zoom: 1;
+}
+
+
+figcaption { 
+
+  position: absolute; 
+  color: white; 
+  font-family:'geosanslightregular',Arial;
+  padding: 10px 20px; 
+  z-index:1;
+  width:50%;
+  opacity: 0;
+  bottom: 0; 
+  left: 0;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;*/
+  	/*Fix Background*/
+	 background:transparent;
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#75000000,endColorstr=#75000000); 
+   zoom: 1;
+}
